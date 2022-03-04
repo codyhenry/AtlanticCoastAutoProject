@@ -1,0 +1,178 @@
+﻿* {
+    font-family: 'Raleway', sans-serif;
+}
+
+input[type=checkbox] {
+    accent-color: #1b4947;
+}
+
+body{
+    background-color: #F1F8F7;
+    color: #1B4947;
+}
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Montserrat', sans-serif;
+  
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 16px;
+}
+p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 27px;
+}
+
+.btn, .btn-sm {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.btn {
+    
+    width: 196px;
+    height: 45px;
+    font-size: 16px;
+}
+
+.btn[disabled], .btn:disabled{
+    background-color: #F1D24F;
+}
+
+.btn-primary {
+    background-color: #88C562;
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:active{
+    background-color:#57AE1F;
+}
+
+.btn-default {
+    background-color: #5097D1;
+    color: #fff;
+}
+
+.btn-default:hover, .btn-defualt:active {
+    background-color: #0A67B0;
+    color: #fff;
+}
+
+.btn-sm {
+    width: 118px;
+    height: 35px;
+    font-size: 12px;
+}
+
+.message-btn-success, .message-btn-error {
+    border-radius: 5px;
+    width: 30rem;
+    height: 6.5rem;
+    background: #fff;
+}
+
+.message-btn-error {
+    border: 2px solid #ef5d5b;
+    
+}
+
+.message-btn-success {
+    border: 2px solid #88c562;
+    
+}
+
+.close{
+    float: right;
+}
+
+.navbar, .navbar-toggle {
+    background-color: #1b4947;
+    
+}
+
+.navbar-toggle{
+    border: none;
+}
+
+.nav li:hover, .navbar-toggle:hover {
+    background-color: #3e7672;
+}
+
+
+.navbar-brand, .navbar-header {
+    color: #fff;
+   
+}
+
+.underline{
+    text-decoration:underline;
+}
+
+.centered{
+    display:flex;
+    justify-content:center;
+}
+
+.card {
+    width: 18rem;
+    height: 35rem;
+    border-radius: 5px;
+    background-color: #fff;
+    border: solid 1px #bde3e4;
+    padding: 10px;
+
+}
+
+.card-img{
+    width: 100%;
+}
+
+.img-lg{
+    width: 50%;
+    height: 50%;
+}
+
+.card-text{
+    overflow-y:hidden;
+}
+
+
+.editor {
+    border-radius: 5px;
+    border: solid 1px #1b4947;
+    background-color: #fff;
+    font-size: 2rem;
+    height: 4rem;
+    width: 48rem;
+}
+
+.space-top{
+    margin-top: 30px;
+}
+
+.jumbotron{
+    background-color: #BDE3E4;
+}
+
+.no-points{
+    list-style-type: none;
+}
+
+.readonly{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+}

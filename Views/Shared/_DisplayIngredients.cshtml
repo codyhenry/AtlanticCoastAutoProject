@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RecipeProj.Models.Ingredient>
+@{ 
+    IEnumerable<IGrouping<string, string>> query = Model.GroupBy(i => i.Category, i => i.Name);
+}
+<div class="row checkForm" >
+    @{
+        foreach (IGrouping<string, string> recipeGroup in query)
+        {
+            // Print the key value of the IGrouping.
+            <div class="col-sm-6 col-md-6 col-lg-2">
+                <h2 class="underline text-capitalize">@(recipeGroup.Key)</h2>
+
+                @foreach (string name in recipeGroup)
+                {
+                    //Make these cards
+                    <label class="checkbox text-capitalize" for=@name>
+                        <input type="checkbox" id="@name" name=@name value=@name />
+                        @name
+                    </label>
+                }
+            </div>
+        }
+    }
+</div>

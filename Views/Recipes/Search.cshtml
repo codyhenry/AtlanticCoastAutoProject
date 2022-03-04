@@ -1,0 +1,46 @@
+﻿@model RecipeProj.Models.RecipeViewModel
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Search</h1>
+
+@using (Html.BeginForm("Search", "Recipes", FormMethod.Post, new { @id = "createform" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row centered">
+        <h2>@Html.LabelFor(model => model.Recipe.Name)</h2>
+    </div>
+    <div class="row centered">
+        <p>(Leave blank to get all recipes)</p>
+    </div>
+    <div class="row centered">
+        @Html.TextBoxFor(model => model.Recipe.Name, new { @class = "editor" })
+
+        @Html.ValidationMessageFor(model => model.Recipe.Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="space-top">
+        <div class="centered"><input class="btn-sm btn-primary" type="submit" value="Submit" /></div>
+    </div>
+}
+
+
+<!--RETURN ALL RESULTS WITH LIKE-->
+<!--Partial View For Search Results-->
+@{
+    if (Model == null || Model.RecipesList == null)
+    {
+
+    }
+    else if (Model.RecipesList.Count == 0)
+    {
+        <h3>Still cant find what you're looking for? Try creating a recipe!</h3>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("CreateName","Recipes")"><span>Create Recipe</span></a>
+    }
+    else
+    {
+        @Html.Partial("_DisplayRecipes", Model.RecipesList);
+    }
+}

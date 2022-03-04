@@ -1,0 +1,21 @@
+﻿@model IEnumerable<RecipeProj.Models.Ingredient>
+
+@{
+    ViewBag.Title = "Select Ingredients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<h1 class="text-center">Select Ingredients</h1>
+<h2 class="text-center">You can select any number of ingredients from each category</h2>
+
+
+<div class="container-fluid">
+    @using(Html.BeginForm("Results","Ingredients",FormMethod.Post))
+    {
+    @Html.AntiForgeryToken()
+    @Html.Partial("_DisplayIngredients", Model);
+    <div class="centered"><input class="btn-sm btn-primary" type="submit" value="Submit" /></div>
+    }
+</div>

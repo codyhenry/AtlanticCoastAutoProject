@@ -1,0 +1,30 @@
+﻿@model IEnumerable<RecipeProj.Models.Recipe>
+
+@{
+    ViewBag.Title = "Results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--DB CALL SHOW ALL RECIPES AND THEIR INGREDIENTS-->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        @{
+            if (Model.Count() == 0)
+            {
+                //partial page for no results and allow search
+                <h1>LOOKS LIKE THERE IS NOTHING HERE</h1>
+            }
+        }
+        <p>Looking for something specific? Try searching the name</p>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Search","Recipes")"><span>Search</span></a>
+
+    </div>
+</div>
+
+<h1 class="centered">Results</h1>
+@Html.Partial("_DisplayRecipes", Model)
+
+
+
+
+

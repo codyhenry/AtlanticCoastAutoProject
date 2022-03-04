@@ -1,0 +1,51 @@
+﻿@model RecipeProj.Models.Recipe
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("CreateRecipe", "Recipes", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <h2>@Html.LabelFor(model => model.Name)</h2>
+    </div>
+    <div class="row">
+        <ul class="no-points">
+            <li>
+                @Html.TextBoxFor(model => model.Name, new {disabled="disabled", @readonly = true, @class = "readonly" })
+                <input type="hidden" value="@Model.Name" id="@Model.Name" name="@Model.Name" />
+            </li>
+        </ul>       
+    </div>
+    <div class="row">
+        <h2>Ingredients:</h2>
+        <ul class="no-points">
+            @{
+                
+
+
+                foreach (var item in Model.Ingredients)
+                {
+                    
+                        <li>
+                            <input type="hidden" value="@item.Name" id="@item.Name" name="@item.Name" />
+                            @Html.TextBoxFor(model => item.Name, new {disabled="disabled", @readonly = true, @class = "readonly" })
+                        </li>
+
+                }
+            }
+        </ul>
+
+    </div>
+    <div class="row">
+        <input type="submit" value="Create" class="btn btn-primary centered space-top" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Start Over", "CreateName")
+</div>
