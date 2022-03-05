@@ -1,6 +1,7 @@
 ﻿using RecipeProj.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,8 @@ namespace RecipeProj.Services.Data
 {
     public class IngredientsDAO
     {
-        private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Recipes;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public string connectionString = ConfigurationManager.ConnectionStrings["NewDB"].ConnectionString;
+
         internal List<Ingredient> GetIngredients()
         {
             List<Ingredient> returnList = new List<Ingredient>();

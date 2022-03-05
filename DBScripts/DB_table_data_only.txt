@@ -1,0 +1,118 @@
+﻿
+INSERT INTO Recipes (Name) values ('Calzones')
+INSERT INTO Recipes (Name) values ('Cheeseburger')
+INSERT INTO Recipes (Name) values ('Chicken Marsala')
+INSERT INTO Recipes (Name) values ('Fettuccine Alfredo')
+INSERT INTO Recipes (Name) values ('Mac and Cheese')
+INSERT INTO Recipes (Name) values ('Mawa')
+INSERT INTO Recipes (Name) values ('Rice Tagine')
+INSERT INTO Recipes (Name) values ('Sushi')
+INSERT INTO Recipes (Name) values ('Salmon Papilllote')
+INSERT INTO Recipes (Name) values ('Tiramisu')
+INSERT INTO Recipes (Name) values ('Orange chicken')
+INSERT INTO Recipes (Name) values ('Salmon boats')
+INSERT INTO Recipes (Name) values ('Chicken Cesar Salad')
+INSERT INTO Recipes (Name) values ('Peking Duck')
+INSERT INTO Recipes (Name) values ('Pigs in a Blanket')
+INSERT INTO Recipes (Name) values ('Chicken Fajita')
+INSERT INTO Recipes (Name) values ('Twice Baked Potato')
+INSERT INTO Recipes (Name) values ('Chicken Soup')
+
+INSERT INTO Ingredients (Name,Category) values ('Butter','Dairy')
+INSERT INTO Ingredients (Name,Category) values ('Cream','Dairy')
+INSERT INTO Ingredients (Name,Category) values ('Yogurt','Dairy')
+INSERT INTO Ingredients (Name,Category) values ('Milk','Dairy')
+INSERT INTO Ingredients (Name,Category) values ('Cheese','Dairy')
+INSERT INTO Ingredients (Name,Category) values ('Turkey','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Goat','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Duck','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Chicken','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Beef','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Salmon','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Sausage','Meats')
+INSERT INTO Ingredients (Name,Category) values ('Mushrooms','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Potatoes','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Sweet Potatoes','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Carrots','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Peas','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Zucchini','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Broccoli','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Cauliflower','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Collard Greens','Vegetables')
+INSERT INTO Ingredients (Name,Category) values ('Thyme','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Rosemary','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Dill','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Mint','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Paprika','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Ginger Powder','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Cinnamon','Spices')
+INSERT INTO Ingredients (Name,Category) values ('Pasta','Grains')
+INSERT INTO Ingredients (Name,Category) values ('Bread','Grains')
+INSERT INTO Ingredients (Name,Category) values ('Rice','Grains')
+
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Calzones' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Calzones' AND Ingredients.Name = 'Bread'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Cheeseburger' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Cheeseburger' AND Ingredients.Name = 'Beef'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Cheeseburger' AND Ingredients.Name = 'Bread'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Marsala' AND Ingredients.Name = 'Chicken'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Marsala' AND Ingredients.Name = 'Mushrooms'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Marsala' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Marsala' AND Ingredients.Name = 'Potatoes'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Marsala' AND Ingredients.Name = 'Thyme'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Marsala' AND Ingredients.Name = 'Rosemary'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Fettuccine Alfredo' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Fettuccine Alfredo' AND Ingredients.Name = 'Pasta'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Fettuccine Alfredo' AND Ingredients.Name = 'Rosemary'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Fettuccine Alfredo' AND Ingredients.Name = 'Thyme'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Mac and Cheese' AND Ingredients.Name = 'Pasta'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Mac and Cheese' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Mawa' AND Ingredients.Name = 'Milk'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Rice Tagine' AND Ingredients.Name = 'Rice'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Rice Tagine' AND Ingredients.Name = 'Milk'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Rice Tagine' AND Ingredients.Name = 'Yogurt'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Rice Tagine' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Rice Tagine' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Sushi' AND Ingredients.Name = 'Rice'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Sushi' AND Ingredients.Name = 'Salmon'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Papilllote' AND Ingredients.Name = 'Salmon'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Papilllote' AND Ingredients.Name = 'Zucchini'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Papilllote' AND Ingredients.Name = 'Carrots'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Papilllote' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Tiramisu' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Tiramisu' AND Ingredients.Name = 'Cinnamon'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Orange chicken' AND Ingredients.Name = 'Chicken'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Orange chicken' AND Ingredients.Name = 'Cinnamon'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Orange chicken' AND Ingredients.Name = 'Paprika'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Boats' AND Ingredients.Name = 'Salmon'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Boats' AND Ingredients.Name = 'Rice'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Salmon Boats' AND Ingredients.Name = 'Paprika'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Cesar Salad' AND Ingredients.Name = 'Chicken'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Cesar Salad' AND Ingredients.Name = 'Zucchini'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Cesar Salad' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Cesar Salad' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Cesar Salad' AND Ingredients.Name = 'Carrots'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Peking Duck' AND Ingredients.Name = 'Duck'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Peking Duck' AND Ingredients.Name = 'Cinnamon'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Peking Duck' AND Ingredients.Name = 'Mushrooms'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Peking Duck' AND Ingredients.Name = 'Ginger Powder'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Pigs in a Blanket' AND Ingredients.Name = 'Sausage'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Pigs in a Blanket' AND Ingredients.Name = 'Bread'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Fajita' AND Ingredients.Name = 'Chicken'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Fajita' AND Ingredients.Name = 'Zucchini'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Fajita' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Twice Baked Potato' AND Ingredients.Name = 'Potatoes'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Twice Baked Potato' AND Ingredients.Name = 'Cheese'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Twice Baked Potato' AND Ingredients.Name = 'Cream'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Twice Baked Potato' AND Ingredients.Name = 'Dill'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Twice Baked Potato' AND Ingredients.Name = 'Rosemary'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Soup' AND Ingredients.Name = 'Chicken'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Soup' AND Ingredients.Name = 'Pasta'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Soup' AND Ingredients.Name = 'Rosemary'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Soup' AND Ingredients.Name = 'Thyme'
+INSERT INTO Recipes_Ingredients (R_Id,I_Id) SELECT Recipes.Id, Ingredients.Id FROM Recipes, Ingredients WHERE Recipes.Name = 'Chicken Soup' AND Ingredients.Name = 'Paprika'
+
+
+
+
+

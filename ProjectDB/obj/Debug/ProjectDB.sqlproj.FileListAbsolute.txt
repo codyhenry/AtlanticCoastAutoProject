@@ -1,0 +1,5 @@
+C:\Users\cody\source\repos\RecipeProj\ProjectDB\bin\Debug\ProjectDB.dacpac
+C:\Users\cody\source\repos\RecipeProj\ProjectDB\bin\Debug\ProjectDB.dll
+C:\Users\cody\source\repos\RecipeProj\ProjectDB\bin\Debug\ProjectDB.pdb
+C:\Users\cody\source\repos\RecipeProj\ProjectDB\obj\Debug\ProjectDB.dll
+C:\Users\cody\source\repos\RecipeProj\ProjectDB\obj\Debug\ProjectDB.pdb
