@@ -192,38 +192,44 @@ namespace RecipeProj.Services.Data
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@name", "%" + name + "%");
+
                 try
                 {
                     conn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
-
+                        string temp = "";
+                        Recipe recipe = new Recipe();
+                        recipe.Ingredients = new List<RecipeProj.Models.Ingredient>();
                         while (dr.Read())
                         {
-                            //get the recipe name
-                            var temp = dr.GetString(0);
-                            Recipe recipe = new Recipe();
-                            recipe.Name = dr.GetString(0);
-                            //create ingredients list
-                            recipe.Ingredients = new List<RecipeProj.Models.Ingredient>();
-
-                            while (dr.GetString(0) == temp)
+                            //if we are on the same recipe name 
+                            if (dr.GetString(0) == temp)
                             {
-                                //read through the entire recipe
+                                // read through the entire recipe
                                 Ingredient ingredient = new Ingredient();
 
                                 ingredient.Name = dr.GetString(1);
-
+                                recipe.Ingredients.Add(ingredient);
+                            }
+                            //we are on a new recipe, finished last recipe
+                            else
+                            {
+                                if(recipe.Name != null)
+                                {
+                                    returnList.Add(recipe);
+                                }
+                                temp = dr.GetString(0);
+                                recipe = new Recipe();
+                                recipe.Ingredients = new List<RecipeProj.Models.Ingredient>();
+                                recipe.Name = temp;
+                                //add the first ingredient
+                                Ingredient ingredient = new Ingredient();
+                                ingredient.Name = dr.GetString(1);
                                 recipe.Ingredients.Add(ingredient);
 
-                                if (!dr.Read())
-                                {
-                                    //no more rows
-                                    break;
-                                }
                             }
-                            returnList.Add(recipe);
                         }
                     }
                     dr.Close();

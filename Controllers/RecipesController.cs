@@ -24,14 +24,13 @@ namespace RecipeProj.Controllers
             IngredientService ingredientService = new IngredientService();
             string name = selections.Recipe.Name;
             List<RecipeProj.Models.Recipe> recipe = ingredientService.GetByName(name);
-
             RecipeProj.Models.RecipeViewModel rm = new RecipeProj.Models.RecipeViewModel();
-
+            Console.WriteLine(recipe);
             rm.RecipesList = recipe;
 
             return View(rm);
         }
-        
+
         public ActionResult CreateName()
         {
           
