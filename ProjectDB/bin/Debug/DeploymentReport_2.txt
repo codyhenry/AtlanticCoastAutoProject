@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Ingredients] (Table)
+       [dbo].[Ingredients].[IX_Ingredients_Column] (Index)
+       [dbo].[Recipes] (Table)
+       [dbo].[Recipes].[IX_Recipes_Column] (Index)
+       [dbo].[Recipes_Ingredients] (Table)
+
+** Supporting actions

@@ -13,8 +13,8 @@ SET NUMERIC_ROUNDABORT OFF;
 
 
 GO
-:setvar DatabaseName "NewDB"
-:setvar DefaultFilePrefix "NewDB"
+:setvar DatabaseName "ProjectDB"
+:setvar DefaultFilePrefix "ProjectDB"
 :setvar DefaultDataPath "C:\Users\cody\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\"
 :setvar DefaultLogPath "C:\Users\cody\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\"
 

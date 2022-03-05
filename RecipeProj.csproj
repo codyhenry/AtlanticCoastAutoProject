@@ -147,7 +147,6 @@
     <Content Include="DBScripts\DB_tables_only.txt" />
     <Content Include="DBScripts\DB_tables_populated.txt" />
     <Content Include="DBScripts\DB_table_data_only.txt" />
-    <Content Include="DBScripts\ProjectDB_1.publish.sql" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
